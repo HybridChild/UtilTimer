@@ -21,7 +21,7 @@ public:
   uint32_t getCounter() const { return _counter; }
   uint32_t getTimeout() const { return _timeout; }
 
-  void handle(uint32_t timePassed)
+  void service(uint32_t timePassed)
   {
     if (isRunning())
     {
