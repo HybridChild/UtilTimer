@@ -16,11 +16,6 @@ public:
   bool isRunning() const { return _counter > 0; }
   bool isExpired() const { return _counter > _timeout; }
 
-  void setTimeout(uint32_t timeout) { _timeout = timeout; }
-  void setAutoReset(bool autoReset) { _autoReset = autoReset; }
-  uint32_t getCounter() const { return _counter; }
-  uint32_t getTimeout() const { return _timeout; }
-
   void service(uint32_t timePassed)
   {
     if (isRunning())
